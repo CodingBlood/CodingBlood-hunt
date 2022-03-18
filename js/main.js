@@ -6,8 +6,9 @@ var options = {
 
 function success(pos) {
   var crd = pos.coords;
-  document.querySelector("H1").textContent=crd.latitude;
-  document.querySelector("H2").textContent=crd.longitude;
+  document.querySelector("H1").textContent=`Latitude : ${crd.latitude}`;
+  document.querySelector("H2").textContent=`Longitude: ${crd.longitude}`;
+  document.querySelector("H4").textContent=`More or less ${crd.accuracy} meters.`;
   console.log('Your current position is:');
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
